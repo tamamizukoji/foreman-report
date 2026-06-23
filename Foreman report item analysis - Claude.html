@@ -1,22 +1,738 @@
-<!doctype html><html data-build-id="bed3876a2d" data-git-hash="bed3876a2d3312f5cd586ccfdf32228b6e05f6ff" data-build-timestamp="1781982853" data-version="1.0.0" data-env="" data-color-version="v2" lang="en" data-theme="claude" data-mode="light" class="h-screen antialiased scroll-smooth"><head data-ion-ip-country="JP"><link rel="preconnect" href="https://assets-proxy.anthropic.com" crossorigin><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title data-react-fallback>Claude</title><meta data-react-fallback name="description" content="Claude is Anthropic's AI, built for problem solvers. Tackle complex challenges, analyze data, write code, and think through your hardest work."><meta name="apple-itunes-app" content="app-id=6473753684"><meta property="og:type" content="website"><meta property="og:site_name" content="Claude"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"><link rel="icon" type="image/png" sizes="32x32" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce67964e7-CAX1bqSh.png"><link rel="icon" type="image/png" sizes="16x16" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c03e51811-DebilQLI.png"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c129d018a-jJjJELY8.png"><link rel="apple-touch-startup-image" href="/images/claude_app_icon.png"><link rel="manifest" href="/manifest.json"><meta name="mobile-web-app-capable" content="yes"><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-CFxw3nG7.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-C-BHYa_K.woff2" as="font" type="font/woff2" crossorigin><script nonce="zObD33foLVy99X6Znn5jUw==">void 0===globalThis.process&&(globalThis.process={env:{},cwd:function(){return"/"}}),void 0===globalThis.global&&(globalThis.global=globalThis)</script><script type="application/ld+json" nonce="zObD33foLVy99X6Znn5jUw==">{
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "name": "Claude",
-            "alternateName": ["Claude.ai", "Claude by Anthropic"],
-            "url": "https://claude.com"
-          },
-          {
-            "@type": "Organization",
-            "name": "Anthropic",
-            "url": "https://www.anthropic.com",
-            "logo": "https://claude.ai/images/claude_ogimage.png",
-            "sameAs": [
-              "https://x.com/AnthropicAI",
-              "https://www.linkedin.com/company/anthropic",
-              "https://www.youtube.com/@anthropic-ai"
-            ]
-          }
-        ]
-      }</script><script nonce="zObD33foLVy99X6Znn5jUw==">!function(){try{performance.mark?.("rq_cache:preload_start");const e="keyval-store",o="keyval",r="react-query-cache",t=new Promise(t=>{if(!window.indexedDB)return void t(void 0);const c=indexedDB.open(e);c.onupgradeneeded=()=>{c.transaction?.abort()},c.onerror=()=>t(void 0),c.onsuccess=()=>{const a=c.result;if(!a.objectStoreNames.contains(o))return a.close(),indexedDB.deleteDatabase(e),void t(void 0);try{const e=a.transaction(o,"readonly").objectStore(o).get(r);e.onerror=()=>{a.close(),t(void 0)},e.onsuccess=()=>{a.close(),window.__PRELOADED_IDB_CACHE_RESULT__=e.result,t(e.result)}}catch{a.close(),t(void 0)}}});window.__PRELOADED_IDB_CACHE__=t,performance.measure?.("rq_cache:preload_exec",{start:"rq_cache:preload_start"})}catch{}}()</script><link rel="preconnect" href="https://js.stripe.com"><link rel="preconnect" href="https://m.stripe.network"><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-Date-AUo.js" nonce="zObD33foLVy99X6Znn5jUw=="></script><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-react-B9b0-tId.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-infra-DayZK7Ds.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-zod-CuL1Z6Rp.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-router-CwO9Xc7m.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-virtual-B3WxoTgP.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-Bn7pSCzU.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-base-ui-swEKT19N.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-ant-cds-BfGUwAr7.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-intl-BtGHkows.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-zustand-B8OyT_4v.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-icons-DZfvJhUo.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-lodash-Da6GP49N.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-query-CuidGUK5.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-luxon-Y8l99kBI.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-motion-B46Z7IfA.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-ant-icons--aE1nlTf.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-growthbook-BCpTXd5u.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c41323917-DLHvODWl.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c32c0d97f-BA4zrQOE.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c85adc124-BlUkFx7L.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c5669b8e4-DY8cGASC.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce51edd53-CGuq17kh.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cbf215181-CvQ1MnHD.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c4b43b0ae-BdUzrb5k.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c60f5ad19-C2kxOHjf.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ca3b5b2cd-Csgs-uHq.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c29fd810e-kHAl02KA.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c58e53d13-DsbyV7s3.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc2e285cb-BhWCf-2p.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c4fba3bc0-Bsn2lZ1S.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c9f4bb49e-C1AnbLSw.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cbaad2c48-GSBhJjip.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6a992d55-BhMeGQsx.js"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-ant-cds-D6IJ1PR1.css"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c41323917-BjS1Z-Ak.css"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c9f4bb49e-o73uZ2YJ.css"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6a992d55-ClFK-KO5.css"></head><body class="bg-bg-100 text-text-100 font-ui min-h-screen"><div id="root"></div><script nonce="zObD33foLVy99X6Znn5jUw==">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.nonce='zObD33foLVy99X6Znn5jUw==';d.innerHTML="window.__CF$cv$params={r:'a0f02f0d1dfdd3e5',t:'MTc4MjAxNTIzOQ=='};var a=document.createElement('script');a.nonce='zObD33foLVy99X6Znn5jUw==';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>職長日報</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;background:#F0F2F5;min-height:100vh;color:#1a1a1a;-webkit-text-size-adjust:100%}
+.app{max-width:700px;margin:0 auto;padding:.75rem}
+@media(max-width:600px){
+  .app{padding:.4rem;max-width:100%}
+  .tab{font-size:13px;padding:11px 4px;gap:3px}
+  .page{padding:1rem .6rem}
+  .title-bar{font-size:16px;padding:12px 14px}
+  .info-grid{grid-template-columns:1fr}
+  .info-full{grid-column:1}
+  .info-item input{font-size:16px;padding:10px 12px}
+  .section{border-radius:8px;margin-bottom:.75rem}
+  .sec-head{font-size:14px;padding:11px 12px}
+  .row{grid-template-columns:1fr;gap:4px;padding:10px 12px}
+  .row-label{font-size:14px;font-weight:700;padding-top:0;color:#1F3864}
+  .row textarea,.row input[type=text]{font-size:16px;padding:10px 12px;min-height:44px}
+  .ts{margin-top:0;align-self:center}
+  .face-row{padding:12px}
+  .face-row input[type=checkbox]{width:24px;height:24px}
+  .face-label{font-size:15px}
+  .cb-head{padding:12px}
+  .cb-head input[type=checkbox]{width:24px;height:24px}
+  .cb-head-label{font-size:14px}
+  .cb-comment{padding:6px 12px 12px 52px}
+  .cb-comment textarea{font-size:15px;padding:9px 10px}
+  .rate-row{padding:12px;flex-wrap:wrap;gap:8px}
+  .rate-num{font-size:22px}
+  .btn-row{gap:8px;margin-top:.5rem}
+  .send-btn{font-size:16px;padding:15px}
+  .reset-btn{font-size:14px;padding:15px 14px}
+  .ok-msg,.err-msg{font-size:14px}
+  .sum-filters{grid-template-columns:1fr}
+  .metrics{grid-template-columns:repeat(3,1fr);gap:6px}
+  .metric{padding:10px 8px}
+  .metric-label{font-size:10px}
+  .metric-val{font-size:20px}
+  .voice-count-body{grid-template-columns:repeat(3,1fr)}
+  .vc-num{font-size:20px}
+  .tbl-wrap{font-size:12px}
+  .modal{margin-top:.5rem;padding:1rem;border-radius:10px}
+  .mrow{font-size:13px}
+  .mlabel{min-width:90px}
+}
+.tabs{display:flex;background:#fff;border-radius:12px 12px 0 0;border:1px solid #ddd;border-bottom:none;overflow:hidden}
+.tab{flex:1;padding:13px 8px;font-size:14px;font-weight:600;color:#888;cursor:pointer;border:none;background:none;display:flex;align-items:center;justify-content:center;gap:5px;font-family:inherit;transition:all .15s}
+.tab.active{color:#1F3864;background:#fff;border-bottom:3px solid #1F3864}
+.tab:hover:not(.active){background:#f5f5f5;color:#444}
+.page{display:none;background:#fff;border:1px solid #ddd;border-top:none;border-radius:0 0 12px 12px;padding:1.5rem}
+.page.active{display:block}
+.title-bar{padding:13px 16px;border-radius:10px;margin-bottom:1.25rem;font-size:16px;font-weight:700;color:#fff}
+.navy{background:#1F3864}.green{background:#1A7A4A}.amber{background:#B45309}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.info-full{grid-column:1/-1}
+.info-item label{font-size:11px;color:#666;display:block;margin-bottom:3px;font-weight:600}
+.info-item input{width:100%;font-size:14px;padding:8px 10px;border:1px solid #ddd;border-radius:8px;background:#fafafa;color:#1a1a1a;font-family:inherit}
+.info-item input:focus{outline:none;border-color:#4472C4;background:#fff}
+.section{border:1px solid #e8e8e8;border-radius:10px;margin-bottom:1rem;overflow:hidden}
+.sec-head{padding:10px 14px;font-size:13px;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px}
+.num-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,0.25);font-size:12px;font-weight:700;flex-shrink:0}
+.row{padding:10px 14px;border-top:1px solid #f0f0f0;display:grid;grid-template-columns:110px 1fr auto;align-items:start;gap:10px}
+.row-label{font-size:13px;color:#444;font-weight:600;padding-top:8px}
+.row textarea,.row input[type=text]{width:100%;font-size:13px;padding:7px 10px;border:1px solid #ddd;border-radius:8px;background:#fafafa;color:#1a1a1a;font-family:inherit;resize:none;min-height:38px;line-height:1.5}
+.row textarea:focus,.row input[type=text]:focus{outline:none;border-color:#4472C4;background:#fff}
+.ts{font-size:11px;font-weight:700;color:#185FA5;background:#E6F1FB;border-radius:5px;padding:2px 7px;white-space:nowrap;min-width:46px;text-align:center;opacity:0;transition:opacity .25s;margin-top:8px;display:inline-block}
+.ts.show{opacity:1!important}
+.ts.pu{color:#3C3489;background:#EEEDFE}
+.face-row{padding:12px 14px;display:flex;align-items:center;gap:12px}
+.face-row input[type=checkbox]{width:20px;height:20px;accent-color:#534AB7;cursor:pointer;flex-shrink:0}
+.face-label{font-size:14px;font-weight:600;flex:1}
+.face-ts{font-size:11px;font-weight:700;color:#3C3489;background:#EEEDFE;border-radius:5px;padding:2px 9px;opacity:0;transition:opacity .25s;display:inline-block}
+.face-ts.show{opacity:1!important}
+.cb-block{border-top:1px solid #f0f0f0}
+.cb-head{padding:9px 14px;display:flex;align-items:center;gap:10px;background:#fafafa}
+.cb-head input[type=checkbox]{width:18px;height:18px;accent-color:#534AB7;cursor:pointer;flex-shrink:0}
+.cb-head-label{font-size:13px;font-weight:600;color:#333;flex:1}
+.cb-ts{font-size:11px;font-weight:700;color:#3C3489;background:#EEEDFE;border-radius:5px;padding:2px 8px;opacity:0;transition:opacity .25s;display:inline-block}
+.cb-ts.show{opacity:1!important}
+.cb-comment{padding:6px 14px 10px 42px;display:flex;align-items:flex-start;gap:8px}
+.cb-comment textarea{width:100%;font-size:12px;padding:6px 9px;border:1px solid #e0e0e0;border-radius:7px;background:#fff;color:#1a1a1a;font-family:inherit;resize:none;min-height:34px;line-height:1.4}
+.rate-row{padding:12px 14px;display:flex;align-items:center;gap:10px}
+.rate-row input[type=range]{flex:1;accent-color:#1F3864}
+.rate-num{font-size:22px;font-weight:700;color:#1F3864;min-width:52px;text-align:right}
+.gas-url-box{background:#FFF8E1;border:1px solid #F0C040;border-radius:8px;padding:10px 14px;margin-bottom:1rem;font-size:13px;color:#7A4F00}
+.gas-url-box input{width:100%;font-size:12px;padding:6px 8px;border:1px solid #ddd;border-radius:6px;margin-top:6px;font-family:monospace}
+.btn-row{display:flex;gap:10px;margin-top:.5rem}
+.send-btn{flex:1;padding:13px;background:#1A7A4A;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s}
+.send-btn:hover{background:#155f3a}
+.send-btn:disabled{opacity:.55;cursor:not-allowed}
+.reset-btn{padding:13px 16px;background:#f0f0f0;color:#555;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.ok-msg{display:none;align-items:center;gap:8px;color:#1A7A4A;background:#EAF3DE;border-radius:8px;padding:11px 14px;font-size:14px;font-weight:600;margin-top:.75rem}
+.ok-msg.show{display:flex}
+.err-msg{display:none;color:#A32D2D;background:#FCEBEB;border-radius:8px;padding:11px 14px;font-size:13px;margin-top:.75rem}
+.err-msg.show{display:block}
+/* 集計 */
+.sum-filters{background:#f5f7fa;border-radius:10px;padding:14px;margin-bottom:1rem;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sum-filters label{font-size:11px;color:#666;font-weight:600;display:block;margin-bottom:3px}
+.sum-filters input,.sum-filters select{width:100%;font-size:13px;padding:7px 10px;border:1px solid #ddd;border-radius:8px;background:#fff;color:#1a1a1a;font-family:inherit}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.metric{background:#f5f7fa;border-radius:10px;padding:12px 14px;text-align:center}
+.metric-label{font-size:11px;color:#888;margin-bottom:4px;font-weight:600}
+.metric-val{font-size:22px;font-weight:700;color:#1F3864}
+.voice-count{border:1px solid #e8e8e8;border-radius:10px;margin-bottom:1rem;overflow:hidden}
+.voice-count-head{background:#1F3864;color:#fff;padding:9px 14px;font-size:13px;font-weight:700}
+.voice-count-body{display:grid;grid-template-columns:repeat(3,1fr)}
+.vc-item{padding:12px 14px;border-right:1px solid #f0f0f0;text-align:center}
+.vc-item:last-child{border-right:none}
+.vc-label{font-size:11px;color:#666;font-weight:600;margin-bottom:4px}
+.vc-num{font-size:22px;font-weight:700;color:#1F3864}
+.vc-rate{font-size:11px;color:#888;margin-top:2px}
+.chart-wrap{background:#f5f7fa;border-radius:10px;padding:14px;margin-bottom:1rem}
+.chart-title{font-size:13px;font-weight:700;color:#444;margin-bottom:10px}
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px}
+.bar-date{color:#888;min-width:56px;flex-shrink:0}
+.bar-track{flex:1;background:#e8e8e8;border-radius:4px;height:18px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+.bar-pct{font-size:11px;color:#fff;font-weight:700}
+.bar-name{color:#888;min-width:44px;font-size:11px}
+.month-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.month-btn{padding:5px 12px;font-size:12px;font-weight:600;border:1px solid #ddd;border-radius:20px;background:#f5f7fa;color:#444;cursor:pointer;font-family:inherit}
+.month-btn.active{background:#1F3864;color:#fff;border-color:#1F3864}
+.tbl-wrap{overflow-x:auto;border:1px solid #e8e8e8;border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:520px}
+th{background:#1F3864;color:#fff;padding:8px 10px;text-align:left;font-weight:600;font-size:11px;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#fafafa}
+.badge-rate{display:inline-block;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:700}
+.del-btn{background:none;border:none;cursor:pointer;color:#E24B4A;font-size:15px;padding:2px 5px}
+.detail-btn{background:#E6F1FB;color:#185FA5;border:none;border-radius:5px;padding:2px 8px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit}
+.tbl-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;flex-wrap:wrap;gap:8px}
+.clear-btn{padding:6px 12px;background:#FCEBEB;color:#A32D2D;border:1px solid #F09595;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+.modal-bg{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:100;overflow-y:auto;padding:2rem 1rem}
+.modal-bg.show{display:flex;align-items:flex-start;justify-content:center}
+.modal{background:#fff;border-radius:12px;padding:1.5rem;max-width:500px;width:100%;margin-top:2rem}
+.modal h3{font-size:15px;font-weight:700;color:#1F3864;margin-bottom:1rem;border-bottom:1px solid #eee;padding-bottom:.75rem}
+.mrow{display:flex;gap:8px;margin-bottom:7px;font-size:13px;border-bottom:1px solid #f5f5f5;padding-bottom:7px}
+.mrow:last-child{border-bottom:none}
+.mlabel{color:#666;font-weight:600;min-width:110px;flex-shrink:0}
+.mval{color:#1a1a1a;flex:1;line-height:1.5}
+.modal-close{width:100%;margin-top:1rem;padding:10px;background:#1F3864;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+/* 返信 */
+.reply-input{width:100%;font-size:13px;padding:8px 10px;border:1px solid #ddd;border-radius:8px;background:#fafafa;color:#1a1a1a;font-family:inherit;margin-top:4px}
+.reply-textarea{width:100%;font-size:13px;padding:8px 10px;border:1px solid #ddd;border-radius:8px;background:#fafafa;color:#1a1a1a;font-family:inherit;resize:none;min-height:100px;line-height:1.5;margin-top:4px}
+.preview-box{background:#f5f5f5;border-radius:8px;padding:10px 12px;font-size:12px;color:#444;white-space:pre-wrap;min-height:60px;line-height:1.6;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('form',this)">📝 日報入力</button>
+  <button class="tab" onclick="switchTab('summary',this)">📊 集計を見る</button>
+</div>
+
+<!-- ===== 日報入力 ===== -->
+<div id="page-form" class="page active">
+  <div class="title-bar navy">📋 職長日報</div>
+
+
+  <div class="info-grid">
+    <div class="info-item"><label>日付</label><input type="date" id="i-date"></div>
+    <div class="info-item"><label>名前</label>
+    <input type="text" id="i-name" placeholder="氏名" list="name-list" autocomplete="off">
+    <datalist id="name-list"></datalist>
+  </div>
+    <div class="info-item info-full"><label>現場名</label>
+    <input type="text" id="i-site" placeholder="現場名を入力" list="site-list" autocomplete="off">
+    <datalist id="site-list"></datalist>
+  </div>
+  <div class="info-item info-full" style="display:flex;align-items:center;gap:10px;background:#f5f7fa;border-radius:8px;padding:10px 12px">
+    <input type="checkbox" id="enjo-cb" style="width:20px;height:20px;accent-color:#534AB7;cursor:pointer;flex-shrink:0" onchange="autoTs(this,'ts-enjo');saveDraft()">
+    <label for="enjo-cb" style="font-size:14px;font-weight:600;color:#333;flex:1;cursor:pointer">応援</label>
+    <span class="ts" id="ts-enjo" style="margin-top:0"></span>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy">🔐 顔認証</div>
+    <div class="face-row">
+      <input type="checkbox" id="face-cb" onchange="faceStamp(this)">
+      <span class="face-label">顔認証完了</span>
+      <span class="face-ts" id="face-ts"></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">１</span>環境整備の実施</div>
+    <div class="cb-block">
+      <div class="cb-head"><input type="checkbox" id="e1" onchange="cbStamp(this,'ts-e1')"><span class="cb-head-label">環境整備チェック</span><span class="cb-ts pu" id="ts-e1"></span></div>
+      <div class="cb-comment"><textarea id="e1-c" rows="2" placeholder="場所・コメント" oninput="autoTs(this,'ts-e1c');saveDraft()"></textarea><span class="ts" id="ts-e1c"></span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">２</span>自主検査</div>
+    <div class="cb-block">
+      <div class="cb-head"><input type="checkbox" id="j1" onchange="cbStamp(this,'ts-j1')"><span class="cb-head-label">自主検査の実施チェック</span><span class="cb-ts pu" id="ts-j1"></span></div>
+      <div class="cb-comment"><textarea id="j1-c" rows="2" placeholder="場所・コメント" oninput="autoTs(this,'ts-j1c');saveDraft()"></textarea><span class="ts" id="ts-j1c"></span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">３</span>声の報告</div>
+    <div class="row"><div class="row-label">① お客様</div><input type="text" id="v1-who" placeholder="お客様名" oninput="autoTs(this,'ts-v1w')"><span class="ts" id="ts-v1w"></span></div>
+    <div class="row"><div class="row-label">　└ 内容</div><textarea id="v1" rows="2" placeholder="内容を記入" oninput="autoTs(this,'ts-v1')"></textarea><span class="ts" id="ts-v1"></span></div>
+    <div class="row"><div class="row-label">② 職人さん</div><input type="text" id="v2-who" placeholder="職人名" oninput="autoTs(this,'ts-v2w')"><span class="ts" id="ts-v2w"></span></div>
+    <div class="row"><div class="row-label">　└ 内容</div><textarea id="v2" rows="2" placeholder="内容を記入" oninput="autoTs(this,'ts-v2')"></textarea><span class="ts" id="ts-v2"></span></div>
+    <div class="row"><div class="row-label">③ その他</div><input type="text" id="v3-who" placeholder="名前" oninput="autoTs(this,'ts-v3w')"><span class="ts" id="ts-v3w"></span></div>
+    <div class="row"><div class="row-label">　└ 内容</div><textarea id="v3" rows="2" placeholder="内容を記入" oninput="autoTs(this,'ts-v3')"></textarea><span class="ts" id="ts-v3"></span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">４</span>本日の作業目標</div>
+    <div class="row"><div class="row-label">目標</div><textarea id="goal" rows="3" placeholder="記入" oninput="autoTs(this,'ts-goal')"></textarea><span class="ts" id="ts-goal"></span></div>
+    <div class="row"><div class="row-label">コメント</div><textarea id="goal-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-goal-c')"></textarea><span class="ts" id="ts-goal-c"></span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">５</span>達成率</div>
+    <div class="rate-row">
+      <span style="font-size:12px;color:#888">0%</span>
+      <input type="range" min="0" max="100" step="1" value="0" id="rate-sl" oninput="rateChange(this)">
+      <span style="font-size:12px;color:#888">100%</span>
+      <span class="rate-num" id="rate-num">0%</span>
+      <span class="ts" id="ts-rate" style="margin-top:0"></span>
+    </div>
+    <div class="row" style="border-top:1px solid #f0f0f0"><div class="row-label">コメント</div><textarea id="rate-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-rate-c')"></textarea><span class="ts" id="ts-rate-c"></span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">６</span>明日の作業段取り</div>
+    <div class="cb-block">
+      <div class="cb-head"><input type="checkbox" id="d1" onchange="cbStamp(this,'ts-d1')"><span class="cb-head-label">① 材料の確認</span><span class="cb-ts pu" id="ts-d1"></span></div>
+      <div class="cb-comment"><textarea id="d1-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-d1c');saveDraft()"></textarea><span class="ts" id="ts-d1c"></span></div>
+    </div>
+    <div class="cb-block">
+      <div class="cb-head"><input type="checkbox" id="d2" onchange="cbStamp(this,'ts-d2')"><span class="cb-head-label">② 人員の確認</span><span class="cb-ts pu" id="ts-d2"></span></div>
+      <div class="cb-comment"><textarea id="d2-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-d2c');saveDraft()"></textarea><span class="ts" id="ts-d2c"></span></div>
+    </div>
+    <div class="cb-block">
+      <div class="cb-head"><input type="checkbox" id="d3" onchange="cbStamp(this,'ts-d3')"><span class="cb-head-label">③ 納まりの確認</span><span class="cb-ts pu" id="ts-d3"></span></div>
+      <div class="cb-comment"><textarea id="d3-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-d3c');saveDraft()"></textarea><span class="ts" id="ts-d3c"></span></div>
+    </div>
+    <div class="row" style="border-top:1px solid #f0f0f0"><div class="row-label">全体コメント</div><textarea id="dantori-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-dantori-c')"></textarea><span class="ts" id="ts-dantori-c"></span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head navy"><span class="num-badge">７</span>自分の意見</div>
+    <div class="row"><div class="row-label">意見</div><textarea id="opinion" rows="3" placeholder="記入" oninput="autoTs(this,'ts-opinion')"></textarea><span class="ts" id="ts-opinion"></span></div>
+    <div class="row"><div class="row-label">コメント</div><textarea id="opinion-c" rows="2" placeholder="コメント" oninput="autoTs(this,'ts-opinion-c')"></textarea><span class="ts" id="ts-opinion-c"></span></div>
+  </div>
+
+  <div class="btn-row">
+    <button class="send-btn" id="send-btn" onclick="sendCW()">📤 Chatworkに送信</button>
+    <button class="reset-btn" onclick="resetForm()">リセット</button>
+  </div>
+  <div class="ok-msg" id="ok-msg">✅ Chatworkに送信しました（集計に保存済み）</div>
+  <div class="err-msg" id="err-msg"></div>
+</div>
+
+<!-- ===== 集計 ===== -->
+<div id="page-summary" class="page">
+  <div class="title-bar green">📊 集計ダッシュボード</div>
+  <div class="sum-filters">
+    <div><label>担当者</label><select id="f-name" onchange="applyFilter()"><option value="">全員</option></select></div>
+    <div><label>現場名</label><select id="f-site" onchange="applyFilter()"><option value="">全現場</option></select></div>
+    <div style="grid-column:1/-1"><label>20日締め 月次選択</label><div class="month-btns" id="month-btns"></div></div>
+    <div><label>期間 開始</label><input type="date" id="f-from" onchange="applyFilter()"></div>
+    <div><label>期間 終了</label><input type="date" id="f-to" onchange="applyFilter()"></div>
+    <div style="grid-column:1/-1"><button onclick="clearFilter()" style="width:100%;padding:9px;background:#1F3864;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">🔄 フィルターをリセット</button></div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="metric-label">対象件数</div><div class="metric-val" id="m-count">0件</div></div>
+    <div class="metric"><div class="metric-label">平均達成率</div><div class="metric-val" id="m-avg">—</div></div>
+    <div class="metric"><div class="metric-label">顔認証率</div><div class="metric-val" id="m-face">—</div></div>
+  </div>
+
+  <div class="voice-count">
+    <div class="voice-count-head">📣 声の報告　件数カウント</div>
+    <div class="voice-count-body">
+      <div class="vc-item"><div class="vc-label">① お客様の声</div><div class="vc-num" id="m-v1">—</div><div class="vc-rate" id="m-v1r"></div></div>
+      <div class="vc-item"><div class="vc-label">② 職人さんの声</div><div class="vc-num" id="m-v2">—</div><div class="vc-rate" id="m-v2r"></div></div>
+      <div class="vc-item"><div class="vc-label">③ その他の声</div><div class="vc-num" id="m-v3">—</div><div class="vc-rate" id="m-v3r"></div></div>
+    </div>
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-title" id="chart-title">達成率の推移（直近10件）</div>
+    <div id="bar-chart"><div style="text-align:center;padding:1.5rem;color:#aaa;font-size:14px">まだ記録がありません</div></div>
+  </div>
+
+  <div class="tbl-top">
+    <div style="font-size:13px;font-weight:600;color:#444">一覧</div>
+    <button class="clear-btn" onclick="clearAll()">🗑 全削除</button>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th style="width:76px">日付</th><th style="width:56px">名前</th><th style="width:72px">現場名</th>
+        <th style="width:50px">達成率</th><th style="width:40px">顔認証</th>
+        <th style="width:34px">材料</th><th style="width:34px">人員</th><th style="width:40px">納まり</th>
+        <th style="width:52px">詳細</th><th style="width:28px"></th>
+      </tr></thead>
+      <tbody id="tbl-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h3 id="modal-title">日報詳細</h3>
+    <div id="modal-body"></div>
+    <button class="modal-close" onclick="document.getElementById('modal-bg').classList.remove('show')">閉じる</button>
+  </div>
+</div>
+</div>
+
+<script>
+const STORE='foreman_v4';
+
+const tsMap={};
+
+
+
+function now(){const d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+function autoTs(el,id){
+  // チェックボックスの場合
+  if(el.type==='checkbox'){
+    const b=document.getElementById(id);
+    if(!b)return;
+    if(el.checked&&!tsMap[id]){
+      tsMap[id]=now();b.textContent=tsMap[id];b.style.opacity='1';b.classList.add('show');
+    }else if(!el.checked){
+      delete tsMap[id];b.textContent='';b.style.opacity='0';b.classList.remove('show');
+    }
+    return;
+  }
+  if(el.value.trim()&&!tsMap[id]){
+    tsMap[id]=now();
+    const b=document.getElementById(id);
+    if(b){b.textContent=tsMap[id];b.style.opacity='1';b.classList.add('show');}
+  }
+}
+function rateChange(el){
+  document.getElementById('rate-num').textContent=el.value+'%';
+  if(!tsMap['ts-rate']){
+    tsMap['ts-rate']=now();
+    const b=document.getElementById('ts-rate');
+    b.textContent=tsMap['ts-rate'];b.style.opacity='1';b.classList.add('show');
+  }
+}
+function cbStamp(cb,id){
+  const b=document.getElementById(id);
+  if(cb.checked){tsMap[id]=now();b.textContent=tsMap[id];b.style.opacity='1';b.classList.add('show');}
+  else{delete tsMap[id];b.textContent='';b.style.opacity='0';b.classList.remove('show');}
+}
+function faceStamp(cb){
+  const b=document.getElementById('face-ts');
+  if(cb.checked){b.textContent=now();b.style.opacity='1';b.classList.add('show');}
+  else{b.textContent='';b.style.opacity='0';b.classList.remove('show');}
+}
+
+(function(){
+  const d=new Date();
+  document.getElementById('i-date').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  loadHistories();
+})();
+
+function gv(id){const el=document.getElementById(id);return el?el.value.trim():''}
+function gt(id){const b=document.getElementById(id);return b&&b.textContent?b.textContent:''}
+function gc(id){const el=document.getElementById(id);return el?el.checked:false}
+function load(){try{return JSON.parse(localStorage.getItem(STORE)||'[]')}catch{return[]}}
+function save(r){try{localStorage.setItem(STORE,JSON.stringify(r))}catch(e){}}
+
+function loadHistories(){
+  const names=JSON.parse(localStorage.getItem('hist_names')||'[]');
+  const sites=JSON.parse(localStorage.getItem('hist_sites')||'[]');
+  const nl=document.getElementById('name-list');
+  const sl=document.getElementById('site-list');
+  nl.innerHTML=names.map(n=>`<option value="${n}">`).join('');
+  sl.innerHTML=sites.map(s=>`<option value="${s}">`).join('');
+  if(names.length)document.getElementById('i-name').value=names[0];
+  if(sites.length)document.getElementById('i-site').value=sites[0];
+  // 前回の入力内容を復元
+  const draft=JSON.parse(localStorage.getItem('form_draft')||'{}');
+  const draftIds=['v1-who','v1','v2-who','v2','v3-who','v3',
+    'goal','goal-c','rate-c','d1-c','d2-c','d3-c','dantori-c',
+    'e1-c','j1-c','opinion','opinion-c','i-site'];
+  draftIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&draft[id])el.value=draft[id];
+  });
+  if(draft['rate-sl']){
+    document.getElementById('rate-sl').value=draft['rate-sl'];
+    document.getElementById('rate-num').textContent=draft['rate-sl']+'%';
+  }
+  if(draft['enjo-cb']!==undefined){
+    const enjo=document.getElementById('enjo-cb');
+    if(enjo)enjo.checked=draft['enjo-cb'];
+  }
+}
+
+function saveDraft(){
+  const draft={};
+  const ids=['v1-who','v1','v2-who','v2','v3-who','v3',
+    'goal','goal-c','rate-c','d1-c','d2-c','d3-c','dantori-c',
+    'e1-c','j1-c','opinion','opinion-c','i-site'];
+  ids.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)draft[id]=el.value;
+  });
+  draft['rate-sl']=document.getElementById('rate-sl').value;
+  const enjo=document.getElementById('enjo-cb');
+  if(enjo)draft['enjo-cb']=enjo.checked;
+  localStorage.setItem('form_draft',JSON.stringify(draft));
+}
+
+function saveHistory(){
+  const name=gv('i-name');
+  const site=gv('i-site');
+  if(name){
+    let names=JSON.parse(localStorage.getItem('hist_names')||'[]');
+    names=([name,...names.filter(n=>n!==name)]).slice(0,10);
+    localStorage.setItem('hist_names',JSON.stringify(names));
+  }
+  if(site){
+    let sites=JSON.parse(localStorage.getItem('hist_sites')||'[]');
+    sites=([site,...sites.filter(s=>s!==site)]).slice(0,10);
+    localStorage.setItem('hist_sites',JSON.stringify(sites));
+  }
+  loadHistories();
+}
+
+function saveRecord(){
+  const rec={
+    id:Date.now(),date:gv('i-date'),name:gv('i-name'),site:gv('i-site'),enjo:document.getElementById('enjo-cb')&&document.getElementById('enjo-cb').checked||false,
+    rate:parseInt(document.getElementById('rate-sl').value)||0,rateTs:gt('ts-rate'),
+    face:gc('face-cb'),faceTs:document.getElementById('face-ts').textContent,
+    d1:gc('d1'),d1ts:gt('ts-d1'),d1c:gv('d1-c'),
+    d2:gc('d2'),d2ts:gt('ts-d2'),d2c:gv('d2-c'),
+    d3:gc('d3'),d3ts:gt('ts-d3'),d3c:gv('d3-c'),
+    dantoriC:gv('dantori-c'),
+    v1who:gv('v1-who'),v1:gv('v1'),v1ts:gt('ts-v1'),
+    v2who:gv('v2-who'),v2:gv('v2'),v2ts:gt('ts-v2'),
+    v3who:gv('v3-who'),v3:gv('v3'),v3ts:gt('ts-v3'),
+    goal:gv('goal'),goalTs:gt('ts-goal'),goalC:gv('goal-c'),
+    rateC:gv('rate-c'),
+    e1:gc('e1'),e1ts:gt('ts-e1'),e1c:gv('e1-c'),
+    j1:gc('j1'),j1ts:gt('ts-j1'),j1c:gv('j1-c'),
+    opinion:gv('opinion'),opinionTs:gt('ts-opinion'),opinionC:gv('opinion-c')
+  };
+  const recs=load();recs.unshift(rec);save(recs);
+  saveHistory();
+}
+
+function resetForm(){
+  const ids=['v1-who','v1','v2-who','v2','v3-who','v3','goal','goal-c','rate-c',
+    'd1-c','d2-c','d3-c','dantori-c','opinion','opinion-c','i-name','i-site'];
+  ids.forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['d1','d2','d3','face-cb','e1','j1','enjo-cb'].forEach(id=>{const el=document.getElementById(id);if(el)el.checked=false;});
+  document.getElementById('rate-sl').value=0;
+  document.getElementById('rate-num').textContent='0%';
+  document.querySelectorAll('.ts,.face-ts,.cb-ts').forEach(b=>{b.textContent='';b.style.opacity='0';b.classList.remove('show');});
+  Object.keys(tsMap).forEach(k=>delete tsMap[k]);
+  const d=new Date();
+  document.getElementById('i-date').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  document.getElementById('ok-msg').classList.remove('show');
+  document.getElementById('err-msg').classList.remove('show');
+  localStorage.removeItem('form_draft');
+}
+
+function buildMsg(){
+  const face=gc('face-cb');const fts=document.getElementById('face-ts').textContent;
+  const ts=id=>{const b=document.getElementById(id);return b&&b.textContent?' ('+b.textContent+')':''};
+  const ck=id=>gc(id)?'✅':'−';
+  const v=id=>gv(id);  // 空なら空文字を返す
+
+  const lines=[];
+  lines.push('📝 職長日報');
+  const enjo=document.getElementById('enjo-cb')&&document.getElementById('enjo-cb').checked;
+  lines.push('日付：'+gv('i-date')+'　名前：'+gv('i-name')+'　現場名：'+gv('i-site')+(enjo?'　応援：✅':''));
+
+  // 顔認証（チェックありのみ）
+  if(face){
+    lines.push('');
+    lines.push('━━ 顔認証 ━━');
+    lines.push('✅ 顔認証完了'+(fts?' ('+fts+')':''));
+  }
+
+  // 環境整備
+  const e1=gc('e1'),e1c=v('e1-c');
+  if(e1||e1c){
+    lines.push('');
+    lines.push('━━ 1. 環境整備の実施 ━━');
+    lines.push(ck('e1')+' 環境整備チェック'+ts('ts-e1'));
+    if(e1c) lines.push('　場所・コメント：'+e1c);
+  }
+
+  // 自主検査
+  const j1=gc('j1'),j1c=v('j1-c');
+  if(j1||j1c){
+    lines.push('');
+    lines.push('━━ 2. 自主検査の実施 ━━');
+    lines.push(ck('j1')+' 自主検査の実施チェック'+ts('ts-j1'));
+    if(j1c) lines.push('　場所・コメント：'+j1c);
+  }
+
+  // 声の報告（入力があるものだけ）
+  const v1=v('v1'),v2=v('v2'),v3=v('v3');
+  const v1w=v('v1-who'),v2w=v('v2-who'),v3w=v('v3-who');
+  if(v1||v2||v3){
+    lines.push('');
+    lines.push('━━ 3. 声の報告 ━━');
+    if(v1||v1w) lines.push('① お客様'+(v1w?' '+v1w:'')+ts('ts-v1w')+(v1?'：'+v1+ts('ts-v1'):''));
+    if(v2||v2w) lines.push('② 職人さん'+(v2w?' '+v2w:'')+ts('ts-v2w')+(v2?'：'+v2+ts('ts-v2'):''));
+    if(v3||v3w) lines.push('③ その他'+(v3w?' '+v3w:'')+ts('ts-v3w')+(v3?'：'+v3+ts('ts-v3'):''));
+  }
+
+  // 作業目標（入力があるときのみ）
+  const goal=v('goal'),goalc=v('goal-c');
+  if(goal||goalc){
+    lines.push('');
+    lines.push('━━ 4. 本日の作業目標 ━━');
+    if(goal) lines.push(goal+ts('ts-goal'));
+    if(goalc) lines.push('コメント：'+goalc);
+  }
+
+  // 達成率（0%以外 or コメントあり）
+  const rate=parseInt(document.getElementById('rate-sl').value)||0;
+  const ratec=v('rate-c');
+  if(rate>0||ratec){
+    lines.push('');
+    lines.push('━━ 5. 達成率 ━━');
+    if(rate>0) lines.push(rate+'%'+ts('ts-rate'));
+    if(ratec) lines.push('コメント：'+ratec);
+  }
+
+  // 段取り（チェックorコメントがあるものだけ）
+  const d1=gc('d1'),d2=gc('d2'),d3=gc('d3');
+  const d1c=v('d1-c'),d2c=v('d2-c'),d3c=v('d3-c'),dc=v('dantori-c');
+  if(d1||d2||d3||d1c||d2c||d3c||dc){
+    lines.push('');
+    lines.push('━━ 6. 明日の作業段取り ━━');
+    if(d1||d1c){lines.push(ck('d1')+' ① 材料の確認'+ts('ts-d1'));if(d1c)lines.push('　コメント：'+d1c);}
+    if(d2||d2c){lines.push(ck('d2')+' ② 人員の確認'+ts('ts-d2'));if(d2c)lines.push('　コメント：'+d2c);}
+    if(d3||d3c){lines.push(ck('d3')+' ③ 納まりの確認'+ts('ts-d3'));if(d3c)lines.push('　コメント：'+d3c);}
+    if(dc) lines.push('全体コメント：'+dc);
+  }
+
+  // 自分の意見（入力があるときのみ）
+  const opinion=v('opinion'),opinionc=v('opinion-c');
+  if(opinion||opinionc){
+    lines.push('');
+    lines.push('━━ 7. 自分の意見 ━━');
+    if(opinion) lines.push(opinion+ts('ts-opinion'));
+    if(opinionc) lines.push('コメント：'+opinionc);
+  }
+
+  return lines.join('\n');
+}
+
+function sendCW(){
+  const btn=document.getElementById('send-btn');
+  const okEl=document.getElementById('ok-msg');
+  const errEl=document.getElementById('err-msg');
+  okEl.classList.remove('show');errEl.classList.remove('show');
+  btn.disabled=true;btn.textContent='送信中...';
+  google.script.run
+    .withSuccessHandler(function(res){
+      if(res.status===200){
+        saveRecord();
+        okEl.textContent='✅ Chatworkに送信しました（集計に保存済み）';
+        okEl.classList.add('show');
+      }else{
+        errEl.textContent='送信失敗（'+res.status+'）';
+        errEl.classList.add('show');
+      }
+      btn.disabled=false;btn.textContent='📤 Chatworkに送信';
+    })
+    .withFailureHandler(function(e){
+      errEl.textContent='送信エラー：'+e.message;
+      errEl.classList.add('show');
+      btn.disabled=false;btn.textContent='📤 Chatworkに送信';
+    })
+    .sendToChatwork(buildMsg());
+}
+
+
+
+// 集計
+let filteredRecs=[];
+function buildSelects(){
+  const recs=load();
+  const names=[...new Set(recs.map(r=>r.name).filter(Boolean))].sort();
+  const sites=[...new Set(recs.map(r=>r.site).filter(Boolean))].sort();
+  const ns=document.getElementById('f-name');const ss=document.getElementById('f-site');
+  const nv=ns.value;const sv=ss.value;
+  ns.innerHTML='<option value="">全員</option>'+names.map(n=>`<option value="${n}">${n}</option>`).join('');
+  ss.innerHTML='<option value="">全現場</option>'+sites.map(s=>`<option value="${s}">${s}</option>`).join('');
+  ns.value=nv;ss.value=sv;
+  buildMonthBtns(recs);
+}
+function buildMonthBtns(recs){
+  const periods=new Set();
+  recs.forEach(r=>{
+    if(!r.date)return;
+    const d=new Date(r.date);
+    let y=d.getFullYear(),m=d.getMonth()+1;
+    if(d.getDate()>20){m+=1;if(m>12){m=1;y+=1;}}
+    periods.add(y+'-'+String(m).padStart(2,'0'));
+  });
+  const sorted=[...periods].sort().reverse();
+  document.getElementById('month-btns').innerHTML=sorted.map(p=>{
+    const [y,m]=p.split('-');
+    return`<button class="month-btn" onclick="setMonthFilter('${p}',this)">${y}年${parseInt(m)}月締め</button>`;
+  }).join('');
+}
+function setMonthFilter(period,btn){
+  const [y,m]=period.split('-').map(Number);
+  const fromY=m===1?y-1:y,fromM=m===1?12:m-1;
+  document.getElementById('f-from').value=fromY+'-'+String(fromM).padStart(2,'0')+'-21';
+  document.getElementById('f-to').value=y+'-'+String(m).padStart(2,'0')+'-20';
+  document.querySelectorAll('.month-btn').forEach(b=>{b.classList.remove('active');b.style.cssText='';});
+  btn.classList.add('active');
+  applyFilter();
+}
+function clearFilter(){
+  ['f-name','f-site','f-from','f-to'].forEach(id=>document.getElementById(id).value='');
+  document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));
+  applyFilter();
+}
+function applyFilter(){
+  const recs=load();
+  const fn=document.getElementById('f-name').value;
+  const fs=document.getElementById('f-site').value;
+  const ff=document.getElementById('f-from').value;
+  const ft=document.getElementById('f-to').value;
+  filteredRecs=recs.filter(r=>{
+    if(fn&&r.name!==fn)return false;
+    if(fs&&r.site!==fs)return false;
+    if(ff&&(r.date||'')<ff)return false;
+    if(ft&&(r.date||'')>ft)return false;
+    return true;
+  });
+  renderMetrics();renderChart();renderTable();
+}
+function renderMetrics(){
+  const recs=filteredRecs,n=recs.length;
+  document.getElementById('m-count').textContent=n+'件';
+  if(n){
+    document.getElementById('m-avg').textContent=Math.round(recs.reduce((s,r)=>s+(r.rate||0),0)/n)+'%';
+    document.getElementById('m-face').textContent=Math.round(recs.filter(r=>r.face).length/n*100)+'%';
+    const v1c=recs.filter(r=>r.v1&&r.v1.trim()).length;
+    const v2c=recs.filter(r=>r.v2&&r.v2.trim()).length;
+    const v3c=recs.filter(r=>r.v3&&r.v3.trim()).length;
+    document.getElementById('m-v1').textContent=v1c+'件';
+    document.getElementById('m-v2').textContent=v2c+'件';
+    document.getElementById('m-v3').textContent=v3c+'件';
+    document.getElementById('m-v1r').textContent='報告率 '+Math.round(v1c/n*100)+'%';
+    document.getElementById('m-v2r').textContent='報告率 '+Math.round(v2c/n*100)+'%';
+    document.getElementById('m-v3r').textContent='報告率 '+Math.round(v3c/n*100)+'%';
+  }else{
+    ['m-avg','m-face','m-v1','m-v2','m-v3'].forEach(id=>document.getElementById(id).textContent='—');
+    ['m-v1r','m-v2r','m-v3r'].forEach(id=>document.getElementById(id).textContent='');
+  }
+}
+function renderChart(){
+  const el=document.getElementById('bar-chart');
+  const recs=[...filteredRecs].reverse().slice(-10);
+  if(!recs.length){el.innerHTML='<div style="text-align:center;padding:1.5rem;color:#aaa;font-size:14px">記録がありません</div>';return;}
+  el.innerHTML=recs.map(r=>{
+    const p=Math.min(r.rate||0,100);
+    const c=p>=80?'#1A7A4A':p>=50?'#378ADD':'#E24B4A';
+    return`<div class="bar-row"><div class="bar-date">${(r.date||'').slice(5)||'—'}</div><div class="bar-track"><div class="bar-fill" style="width:${p}%;background:${c}"><span class="bar-pct">${p>12?p+'%':''}</span></div></div><div class="bar-name">${r.name||''}</div></div>`;
+  }).join('');
+}
+function renderTable(){
+  const tb=document.getElementById('tbl-body'),recs=filteredRecs;
+  if(!recs.length){tb.innerHTML='<tr><td colspan="10" style="text-align:center;padding:1.5rem;color:#aaa">記録がありません</td></tr>';return;}
+  tb.innerHTML=recs.map(r=>{
+    const p=r.rate||0;
+    const bc=p>=80?'background:#EAF3DE;color:#27500A':p>=50?'background:#E6F1FB;color:#0C447C':'background:#FCEBEB;color:#791F1F';
+    return`<tr><td>${r.date||'—'}</td><td>${r.name||'—'}</td><td>${r.site||'—'}</td>
+      <td><span class="badge-rate" style="${bc}">${p}%</span></td>
+      <td style="text-align:center">${r.face?'✅':'−'}</td>
+      <td style="text-align:center">${r.d1?'✅':'−'}</td>
+      <td style="text-align:center">${r.d2?'✅':'−'}</td>
+      <td style="text-align:center">${r.d3?'✅':'−'}</td>
+      <td><button class="detail-btn" onclick="showDetail(${r.id})">詳細</button></td>
+      <td><button class="del-btn" onclick="delRec(${r.id})">×</button></td></tr>`;
+  }).join('');
+}
+function showDetail(id){
+  const rec=load().find(r=>r.id===id);if(!rec)return;
+  document.getElementById('modal-title').textContent=(rec.date||'')+'　'+(rec.name||'')+'　'+(rec.site||'');
+  const ck=v=>v?'✅ 完了':'−';
+  const ts=t=>t?' ('+t+')':'';
+  const rows=[
+    ['顔認証',ck(rec.face)+ts(rec.faceTs)],
+    ['① お客様',(rec.v1who||'—')+' / '+(rec.v1||'（なし）')+ts(rec.v1ts)],
+    ['② 職人さん',(rec.v2who||'—')+' / '+(rec.v2||'（なし）')+ts(rec.v2ts)],
+    ['③ その他',(rec.v3who||'—')+' / '+(rec.v3||'（なし）')+ts(rec.v3ts)],
+    ['作業目標',(rec.goal||'（なし）')+ts(rec.goalTs)],
+    ['目標コメント',rec.goalC||'（なし）'],
+    ['達成率',(rec.rate||0)+'%'+ts(rec.rateTs)],
+    ['達成率コメント',rec.rateC||'（なし）'],
+    ['① 材料確認',ck(rec.d1)+ts(rec.d1ts)],['　└コメント',rec.d1c||'（なし）'],
+    ['② 人員確認',ck(rec.d2)+ts(rec.d2ts)],['　└コメント',rec.d2c||'（なし）'],
+    ['③ 納まり確認',ck(rec.d3)+ts(rec.d3ts)],['　└コメント',rec.d3c||'（なし）'],
+    ['段取り全体',rec.dantoriC||'（なし）'],
+    ['自分の意見',(rec.opinion||'（なし）')+ts(rec.opinionTs)],
+    ['意見コメント',rec.opinionC||'（なし）'],
+  ];
+  document.getElementById('modal-body').innerHTML=rows.map(([l,v])=>`<div class="mrow"><div class="mlabel">${l}</div><div class="mval">${v}</div></div>`).join('');
+  document.getElementById('modal-bg').classList.add('show');
+}
+function closeModal(e){if(e.target===document.getElementById('modal-bg'))document.getElementById('modal-bg').classList.remove('show')}
+function delRec(id){if(confirm('削除しますか？')){save(load().filter(r=>r.id!==id));renderSummary();}}
+function clearAll(){if(confirm('全記録を削除しますか？')){save([]);renderSummary();}}
+function renderSummary(){buildSelects();applyFilter();}
+function switchTab(name,el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('page-'+name).classList.add('active');
+  if(name==='summary')renderSummary();
+}
+</script>
+</body>
+</html>
